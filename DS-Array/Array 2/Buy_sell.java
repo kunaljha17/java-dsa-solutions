@@ -4,20 +4,20 @@ public class Buy_sell {
     // int buyAtMin = Integer.MAX_VALUE;
     // int sellAtMax = Integer.MIN_VALUE;
     // int startDay;
-    // for (int i = 0; i < prices.length; i++) {
+    // for (int i = 0; i < prices.length; i++) {   -->> here buy at minimum cost and store start day ..for sell after this day at maximum price
     // if (buyAtMin > prices[i]) {
     // buyAtMin = prices[i];
     // startDay = i;
     // }
     // }
 
-    // for (int i = startDay; i < prices.length; i++) {
+    // for (int i = startDay; i < prices.length; i++) {   -->> here store maximum price from after start day 
     // if (sellAtMax < prices[i]) {
     // sellAtMax = prices[i];
     // }
     // }
 
-    // int profit = sellAtMax - buyAtMin;
+    // int profit = sellAtMax - buyAtMin;  -->> calculating max profit and return 
     // return profit;
 
     // }
