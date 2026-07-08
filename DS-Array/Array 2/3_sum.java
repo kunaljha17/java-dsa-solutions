@@ -7,7 +7,7 @@ class Solution {
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
-
+                //this greater than 0 bcz if i =0 then nums [-1] give error
             if (i > 0 && nums[i] == nums[i - 1]) {//Hnadling duplicates
                 continue;
             }
