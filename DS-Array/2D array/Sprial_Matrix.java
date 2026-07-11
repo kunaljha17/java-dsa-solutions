@@ -1,4 +1,11 @@
-public class SprialQ {
+// Print the whole top row.
+// Print the whole right column.
+// If a bottom row still exists, print it.
+// If a left column still exists, print it.
+
+
+
+public class Sprial_Matrix {
 
     public static void PrintSpiral(int matrix[][]) {
         int startRow = 0;
