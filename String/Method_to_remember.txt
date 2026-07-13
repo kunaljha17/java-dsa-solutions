@@ -1,0 +1,33 @@
+For String :
+
+
+length()
+charAt()
+substring()
+indexOf()
+lastIndexOf()
+contains()
+split()
+trim()
+replace()
+replaceAll()
+toLowerCase()
+toUpperCase()
+equals()
+equalsIgnoreCase()
+
+
+//<><><><><><><><><>\\
+
+
+For StringBuilder:
+
+append()
+delete()
+deleteCharAt()
+insert()
+setCharAt()
+reverse()
+length()
+charAt()
+toString(
