@@ -26,3 +26,37 @@ class Solution {
         return -1;
     }
 }
+
+
+
+
+// Single Element in a Sorted Array
+// Input: nums = [1,1,2,3,3,4,4,8,8]
+// Output: 2
+// Input: nums = [3,3,7,7,10,11,11]
+// Output: 10
+// mid is even
+// Yes → pairing is still normal.
+// The single element must be to the right.
+
+// No → the pairing has already broken.
+// The single element is at mid or to the left.
+
+
+
+class Solution {
+    public int singleNonDuplicate(int[] nums) {
+        int low = 0, high = nums.length - 1;
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            if (mid % 2 == 1) mid--;
+            if (nums[mid] == nums[mid + 1]) {
+                low = mid + 2;
+            } else {
+                high = mid;
+            }
+        }
+        return nums[low];
+    }
+}
+
