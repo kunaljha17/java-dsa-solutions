@@ -178,7 +178,7 @@ public class Full_linked_listP1 {
     public Node findMidNode(Node head){
         Node slow = head;//(+1)
         Node fast = head;//(+2)
-        while (fast!=null&&fast.next!=null) {
+        while (fast.next!=null&&fast.next.next!=null) { // correct mid for both odd and even too
             slow = slow.next;
             fast = fast.next.next;
         }
