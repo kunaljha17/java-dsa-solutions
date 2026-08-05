@@ -8,7 +8,8 @@
 // Width = lastPosition - firstPosition + 1.
 // Update the maximum width.
 // When adding children to the queue, compute their positions based on the parent's position.
-
+                                        // take max of width = lastOcurranceIdx - FirstOccurranceIdx +1
+//To solve this remember this formulas : (left)2*i+1  , (right)2*i+2 
 
 
 
