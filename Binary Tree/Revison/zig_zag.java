@@ -1,4 +1,6 @@
-
+// in this we use Queue for normal level order traverse , and Deque for storing one level node in zig zag way ..
+// then when when one level complete then store and rest deque ...
+// one flag too to track left to right or right to left adding  in deqeue
 
 
 
