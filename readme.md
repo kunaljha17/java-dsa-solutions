@@ -28,19 +28,10 @@ This repository contains Java implementations of Data Structures and Algorithms 
 
 Each folder includes standalone `.java` files for specific concepts or problem statements.
 
-## How to Run
+## About This Repository
 
-There is no single build system configured (no Maven/Gradle project).  
-Compile and run files directly using `javac` and `java`.
-
-From the repository root:
-
-```bash
-javac "Graph/BFS.java"
-java -cp Graph BFS
-```
-
-For files inside nested directories, compile/run using the corresponding folder path and class name.
+I practice DSA both in VS Code and on coding platforms.  
+The problems I like the most are stored here with my own opinions, approaches, and explanations.
 
 ## Notes
 
