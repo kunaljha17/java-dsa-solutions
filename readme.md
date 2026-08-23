@@ -37,4 +37,4 @@ The problems I like the most are stored here with my own opinions, approaches, a
 
 - Many folders also contain `.class` files generated from local compilation.
 - File and folder naming follows the original practice organization.
-- This README was created by Copilot, and only Copilot contributes to this file.
+- This README was created by GitHub Copilot, and Copilot contributed to this file.
