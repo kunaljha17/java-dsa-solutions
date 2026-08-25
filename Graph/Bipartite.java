@@ -1,3 +1,43 @@
+//Approaches there is two approaches i currently know 
+// approach 1 :  Recursive Depth-First Search (DFS) — often cleaner and uses less boilerplate than BFS.
+// approach 2 : Disjoint Set Union (DSU / Union-Find) — groups neighbors into the same partition without explicit color arrays.
+
+// here is appraoch 1code 
+
+class Solution {
+    public boolean isBipartite(int[][] graph) {
+        int n = graph.length;
+        int[] color = new int[n];
+        for (int i = 0; i < n; i++) {
+            if (color[i] == 0) {
+                if (!dfs(i, 1, color, graph)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private boolean dfs(int node, int c, int[] color, int[][] graph) {
+        color[node] = c;
+        for (int neighbor : graph[node]) {
+            if (color[neighbor] == 0) {
+                if (!dfs(neighbor, -c, color, graph)) {
+                    return false;
+                }
+            } else if (color[neighbor] == c) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+// -----------------------------
+
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
