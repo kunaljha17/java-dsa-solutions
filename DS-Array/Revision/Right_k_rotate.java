@@ -20,11 +20,14 @@ class Solution {
         }
     }
 }
-
+//O(n+k) time complexity
+//(k) space complexity
 
 //aprroach two is 
 
-// First reverse 0 to kth element
-//   then revrse k to nth element 
-//   then final revrse all to get desire array
+// First reverse 0 to kth element (0 ,k)
+//   then revrse k to nth element (k,n)
+//   then final revrse all to get desire array (0,n)
+
+//here in this way time complexity slightly increae but space complexity is O(1)
 
