@@ -24,10 +24,14 @@ class Solution {
 //(k) space complexity
 
 //aprroach two is 
-
-// First reverse 0 to kth element (0 ,k)
-//   then revrse k to nth element (k,n)
-//   then final revrse all to get desire array (0,n)
-
+(for right rotate)
+// First reverse  reverse entire array
+//   then revrse reverse first k elements
+//   then final reverse remaining n-k elements
+(for left rotate)
+//  Step 1: reverse first k elements
+// Step 2: reverse remaining n-k elements
+// Step 3: reverse entire array
+    
 //here in this way time complexity slightly increae but space complexity is O(1)
 
