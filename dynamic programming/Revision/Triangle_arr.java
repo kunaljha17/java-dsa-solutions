@@ -1,0 +1,14 @@
+//approach is simple make 1d array that store min sum at that row an move to next so on
+
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        int[] dp = new int[n + 1];    
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 0; j <= i; j++) {
+                dp[j] = triangle.get(i).get(j) + Math.min(dp[j], dp[j + 1]);
+            }
+        }
+        return dp[0];
+    }
+}
