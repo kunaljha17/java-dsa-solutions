@@ -5,7 +5,7 @@
 //  this way i use in multipication  res = res * (row - i) / i
 //because we no need to be division done by starting
 
-//**** if we need to get exact val by row and col we do apply nCr formula so get this 
+//**** if we need to get exact val by row and col we do apply (n-1)C(r-1) formula so get this 
 
 class Solution {
 
