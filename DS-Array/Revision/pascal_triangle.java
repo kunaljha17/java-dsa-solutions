@@ -29,3 +29,22 @@ class Solution {
         return ls;
     }
 }
+
+//Another veriant i talk about this 
+//we have to mind for integer over flow issue 
+// So do check contraint
+
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> list = new ArrayList<>();
+        long res = 1;
+        list.add(1);
+        int row = rowIndex+1;
+        for(int i = 1;i<=rowIndex;i++){
+            res = (long)res * (row - i) / i;
+            list.add((int)res);
+        }
+        return list;
+    }
+}
+
