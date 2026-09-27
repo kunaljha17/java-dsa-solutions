@@ -23,3 +23,15 @@ class Solution {
         return min;
     }
 }
+
+
+
+
+//alternative if else works 
+if (nums[mid] > nums[high]) {
+                // Minimum is in right half
+                low = mid + 1;
+            } else {
+                // Minimum can be mid or left half
+                high = mid - 1;
+            }
