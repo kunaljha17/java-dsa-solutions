@@ -1,0 +1,39 @@
+//Approach 1 
+//brute force 
+// just make one countStation for each section so overall minimize length
+
+
+//NOT GOOD AND OPTIMIZE CODE
+class Solution {
+    public double minMaxDist(int[] stations, int k) {
+        int n = stations.length;
+        int countStation [] = new int[n-1];
+        
+        for(int station = 1;station<=k;station++){
+            
+            double maxSection = -1.0;
+            int maxIdx = -1;
+            
+            for(int i =0;i<n-1;i++){
+                double diff = stations[i+1]-stations[i];
+                double currLength = diff/(double)(countStation[i]+1);
+                
+                if(maxSection<currLength){
+                    maxSection = currLength;
+                    maxIdx = i;
+                }
+            }
+            countStation[maxIdx]++;
+        }
+        
+        double ans = -1.0;
+        for(int i =0;i<n-1;i++){
+            double diff = stations[i+1]-stations[i];
+            double currLength = diff/(double)(countStation[i]+1);
+            ans = Math.max(currLength,ans);
+            
+        }
+        return ans;
+        
+    }
+}
