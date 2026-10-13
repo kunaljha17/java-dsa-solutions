@@ -18,6 +18,13 @@ public class recur {
         f(arr, idx+1, sum, target,num); // Do not take the current element
     }
 
+// Base case: If sum == target, print the current subsequence and return true.
+// Take: Add the current element and recursively search.
+// Stop early: If the recursive call returns true, immediately return true without exploring other possibilities.
+// Backtrack: If taking the element doesn't find a solution, remove it.
+// Not take: Recursively search without the current element.
+
+    
     public boolean OneF(ArrayList<Integer> arr ,int idx , int sum, int target ,int []num){
         
         if(sum == target){
