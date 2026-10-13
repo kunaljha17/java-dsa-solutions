@@ -44,6 +44,25 @@ public class recur {
         return false;
     }
 
+
+
+public int countF(ArrayList<Integer> arr, int idx, int sum, int target, int[] num) {
+
+        if (sum == target) {
+            return 1;
+        }
+        if (idx == num.length)
+            return 0;
+
+        arr.add(num[idx]);
+        int l = countF(arr, idx + 1, sum + num[idx], target, num);
+        arr.remove(arr.size() - 1);// Backtrack
+        int r = countF(arr, idx + 1, sum, target, num); // Do not take the current element
+        return l + r;
+    }
+
+
+    
     public static void main(String[] args) {
         
     }
