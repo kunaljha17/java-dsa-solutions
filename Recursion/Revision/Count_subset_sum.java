@@ -18,3 +18,31 @@ class Solution {
 		return new Solution().countF(0,0,target,arr);
 	}
 }
+
+
+
+//Finally i write this , 
+// Approach: 1D Dynamic Programming (DP)
+// dp[s] = number of subsets with sum s.
+// dp[0] = 1 → one empty subset.
+// Transition: dp[sum] += dp[sum - num].
+// Iterate backward to use each element only once.
+// Handle zeros: they double the count of every reachable sum.
+
+
+class Solution {
+    static int perfectSum(int[] arr, int target) {
+         
+        int[] dp = new int[target + 1];
+
+        dp[0] = 1;
+
+        for (int num : arr) {
+            for (int sum = target; sum >= num; sum--) {
+                dp[sum] = (dp[sum] + dp[sum - num]) ;
+            }
+        }
+
+        return dp[target];
+    }
+}
