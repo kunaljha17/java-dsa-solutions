@@ -26,3 +26,39 @@ class Solution {
         return totalCandies;
     }
 }
+
+
+
+//Most optimal way of doing this problem is single-pass approach using peak and down slopes
+
+
+
+//O(N)time & O(1) space
+
+    class Solution {
+    public int candy(int[] ratings) {
+        int sum =1;
+        int i = 1;
+        while(i<ratings.length){
+            if(ratings[i]==ratings[i-1]){
+                sum +=1;
+                i++;
+                continue;
+            }
+            int peak =1;
+            while(i<ratings.length && ratings[i]>ratings[i-1]){
+                peak+=1;
+                sum +=peak;
+                i++;
+            }
+            int down = 0;  //that the peak is shared between both slopes, so it must not be counted twice
+            while(i<ratings.length && ratings[i]<ratings[i-1]){
+                down++;
+                sum +=down;
+                i++;
+            }
+           if(down>=peak) sum += down-peak+1;
+        }
+        return sum;
+    }
+}
