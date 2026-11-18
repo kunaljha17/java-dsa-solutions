@@ -23,3 +23,21 @@ class Solution {
         return count;
     }
 }
+
+//Approch 2 
+
+class Solution {
+    public int numberOfSubstrings(String s) {
+        int[] hist = { -1, -1, -1 }; // this is three var storage (store index of char)
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            hist[s.charAt(i) - 'a'] = i;
+            if (hist[0] != -1 && hist[1] != -1 && hist[2] != -1) { // here this check that all three are in current substring
+                int min = Math.min(hist[0], Math.min(hist[1], hist[2]));
+                count += min + 1;  
+            }
+
+        }
+        return count;
+    }
+}
