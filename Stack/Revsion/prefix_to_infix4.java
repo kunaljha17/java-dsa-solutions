@@ -3,11 +3,11 @@
 
 // and done 
 
+
+//By doing reverse approach
 class Solution {
     public String preToInfix(String s) {
         Stack<String> st = new Stack<>();
-        
-         
         
         String newS = new StringBuilder(s).reverse().toString();
         
@@ -28,3 +28,33 @@ class Solution {
         return st.pop();
     }
 }
+
+
+//Approach 2 : iterate from left to right 
+// make sure s1 is left  and s2 is right
+
+class Solution {
+    public String preToInfix(String s) {
+        Stack<String> st = new Stack<>();
+        
+        
+        for(int i =s.length()-1;i>=0;i--){
+
+            char ch = s.charAt(i);
+
+            if(Character.isLetterOrDigit(ch)){
+                st.push(String.valueOf(ch));
+            }else{
+                String s1 = st.pop(); //right
+                String s2 = st.pop();//left
+                String newStr = "("+s1+s.charAt(i)+s2+")";
+                st.push(newStr);
+            }
+        }
+         
+        return st.pop();
+    }
+}
+
+
+
